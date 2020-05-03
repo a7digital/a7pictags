@@ -1,10 +1,17 @@
 {
-  "repositories": [
-    {
+  "repositories": {
+    "default": {
       "type": "composer",
       "url": "https://composer.typo3.org/"
+    },
+    "a7neuralnet": {
+      "type": "path",
+      "url": "/home/a7mb/a7digital/Projekte/Extensions/a7neuralnet/source",
+      "options": {
+        "symlink": true
+      }
     }
-  ],
+  },
   "name": "a7digital/a7pictags",
   "description": "Provides automatic image tagging via Deep Learning",
   "type": "typo3-cms-extension",
@@ -32,7 +39,11 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "typo3/cms-core": "^9.5"
+    "typo3/cms-core": "9.5.14",
+    "typo3/cms-filelist": "^9.5",
+    "a7digital/a7neuralnet": "*",
+    "ext-json": "*",
+    "typo3/cms-filemetadata": "^9.5"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master"
